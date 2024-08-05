@@ -6,6 +6,7 @@ import github from './assets/github.png';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
 
+
 function Auth() {
   const [action, setAction] = useState('Sign Up');
   const [email, setEmail] = useState('');
@@ -43,8 +44,14 @@ function Auth() {
   };
 
   return (
-    <div className="bg-gray-600 h-[100vh]">
-      <div className="flex justify-center items-center h-full bg-gradient-to-br from-purple-700 to-black">
+    <div className="h-[100vh]">
+        <div>
+        <Link to="/" className="bg-white text-purple-700 text-4xl text-center py-2 w-36 rounded-3xl hover:bg-gray-200 transition">
+            Home
+         </Link>       
+      </div>
+      <div className="flex justify-center items-center h-full bg-gradient-to-br  from-purple-700 to-black">
+      
         <div className="lg:w-[450px] bg-white py-20 px-10 rounded-bl-[40px] rounded-se-[40px]">
           <h1 className="text-4xl text-black-900 text-center mb-6 transition-all">{action}</h1>
           <form onSubmit={handleSubmit} className="w-full">
