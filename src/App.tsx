@@ -33,7 +33,7 @@ const App: React.FC = () => {
                   <div className="w-full md:w-1/2 p-10 bg-gray-900">
                       <h2 className="text-white text-3xl font-bold mb-4">Click The Button Below To Get Started</h2>
                       <div className="flex justify-center">
-                          <Link to="/Auth" className="bg-white text-purple-700 text-4xl text-center py-2 w-36 mt-6 rounded-3xl hover:bg-gray-200 transition">
+                          <Link to="/Auth" className="bg-white text-purple-700 text-4xl text-center py-2 mt-8 w-36 rounded-3xl hover:bg-gray-200 transition">
                               Click Me
                           </Link>
                       </div>
