@@ -36,12 +36,6 @@ const App: React.FC = () => {
                           <Link to="/Auth" className="bg-white text-purple-700 text-4xl text-center py-2 w-36 rounded-3xl hover:bg-gray-200 transition">
                               Click Me
                           </Link>
-                          <Link to="/PasswordReset" className="bg-white text-purple-700 text-4xl text-center py-2 w-36 rounded-3xl hover:bg-gray-200 transition">
-                              Click Me
-                          </Link>
-                          <Link to="/Auth" className="bg-white text-purple-700 text-4xl text-center py-2 w-36 rounded-3xl hover:bg-gray-200 transition">
-                              Click Me
-                          </Link>
                       </div>
                   </div>
               </div>
