@@ -113,14 +113,17 @@ function Auth() {
             </div>
             {action === 'Login' && (
               <div>
-                <p>Forgot Password? <Link to="/PasswordReset" className="text-purple-500 hover:underline">Click Here</Link></p>
+                <p>Forgot Password? <Link to="/resetPassword" className="text-purple-500 hover:underline">Click Here</Link></p>
               </div>
             )}
             <div className="flex justify-center gap-10 mt-10">
               <button
                 type="submit"
                 className={`text-xl text-white py-2 w-36 rounded-3xl ${action === 'Sign Up' ? 'bg-gray-900' : 'bg-gray-200'}`}
-              >
+                onClick={() => setAction(action === 'Login' ? 'Sign Up' : 'Login')}
+                >
+                  {action === 'Login' ? 'Sign Up' : 'Login'}              
+              
                 {action}
               </button>
               <button
