@@ -122,7 +122,7 @@ function Auth() {
                 className={`text-xl text-white py-2 w-36 rounded-3xl ${action === 'Sign Up' ? 'bg-gray-900' : 'bg-gray-200'}`}
                 onClick={() => setAction(action === 'Login' ? 'Sign Up' : 'Login')}
                 >
-                  {action === 'Login' ? 'Sign Up' : 'Login'}              
+                  {/* {action === 'Login' ? 'Sign Up' : 'Login'}               */}
               
                 {action}
               </button>
