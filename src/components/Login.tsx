@@ -7,9 +7,12 @@ const App: React.FC = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({ email: '', password: '' });
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setLoading(true);
+    
     const newErrors = { email: '', password: '' };
 
     if (!email) {
@@ -22,15 +25,18 @@ const App: React.FC = () => {
     setErrors(newErrors);
 
     if (!newErrors.email && !newErrors.password) {
-      // Submit form
+      // Simulate an async operation (e.g., API call)
+      await new Promise((resolve) => setTimeout(resolve, 2000));
       console.log({ email, password });
     }
+
+    setLoading(false);
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-700 to-black p-10 mt-3 flex items-center justify-center">
+    <div className="min-h-screen bg-gradient-to-br from-purple-700 to-black p-10 flex items-center justify-center">
       <div className="max-w-4xl w-full mx-auto bg-gray-800 rounded-lg shadow-md overflow-hidden flex">
-        <div className="hidden md:block w-1/2 bg-gradient-to-br from-purple-700 to-black p-10 ">
+        <div className="hidden md:block w-1/2 bg-gradient-to-br from-purple-700 to-black p-10">
           <div className="flex flex-col justify-center h-full text-center">
             <h2 className="text-white text-3xl font-bold mb-4">Get Started with Us</h2>
             <p className="text-gray-300 mb-6">Complete these easy steps to register your account.</p>
@@ -62,6 +68,7 @@ const App: React.FC = () => {
                   placeholder="Enter Your Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  disabled={loading}
                 />
               </div>
               {errors.email && <p className="text-red-500 text-sm mt-2">{errors.email}</p>}
@@ -75,12 +82,13 @@ const App: React.FC = () => {
                   placeholder="Enter Your Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
+                  disabled={loading}
                 />
               </div>
               {errors.password && <p className="text-red-500 text-sm mt-2">{errors.password}</p>}
             </div>
-            <button type="submit" className="w-full bg-purple-900 text-white py-2 rounded hover:bg-gray-600">
-              Login
+            <button type="submit" className="w-full bg-purple-900 text-white py-2 rounded hover:bg-gray-600" disabled={loading}>
+              {loading ? 'Loading...' : 'Login'}
             </button>
             <div className="mt-4 text-center">
               <p>Forgot Password? <Link to="/ForgetPassword" className="text-purple-500 hover:underline">Click Here</Link></p>

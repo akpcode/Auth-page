@@ -20,7 +20,7 @@ const ForgetPassword: React.FC = () => {
   return (
     <>
     <Nav />
-    <div className="flex flex-col items-center justify-center min-h-screen bg-white ">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-700 to-black ">
       <form onSubmit={handleSubmit} className="bg-white p-6 rounded shadow-md w-full max-w-sm">
       <h2 className="text-4xl text-center font-bold mb-6">Forgot Password</h2>
         <div className="bg-gray-200 flex items-center gap-5 my-4 p-4 rounded">

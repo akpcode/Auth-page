@@ -5,6 +5,7 @@ import google from '../assets/google.png';
 import github from '../assets/github.png';
 import { Link } from 'react-router-dom';
 import { useState } from "react";
+import Nav from "./Nav";
 
 function SignUp() {
   const [email, setEmail] = useState('');
@@ -44,15 +45,13 @@ function SignUp() {
   return (
     <div className="h-[100vh]">
     <div>
-    <Link to="/" className="bg-white text-purple-700 text-4xl text-center py-2 w-36 rounded-3xl hover:bg-gray-200 transition">
-        Home
-     </Link>       
+    <Nav />       
   </div>
-  <div className="flex justify-center items-center h-full bg-white">
+  <div className="flex justify-center items-center h-full bg-gradient-to-br from-purple-700 to-black mt-12">
   
-    <div className="lg:w-[450px] bg-purple-400 py-20 px-10 rounded-bl-[40px] rounded-se-[40px]">
+    <div className="lg:w-[450px] bg-white py-20 px-10 rounded-bl-[40px] rounded-se-[40px]">
       <h1 className="text-4xl text-black-900 text-center mb-6 transition-all">Sign Up</h1>
-      <form onSubmit={handleSubmit} className="w-full">
+      <form onSubmit={handleSubmit} className="w-full bg-white">
        
           <div className="bg-gray-200 flex items-center gap-5 my-4 p-4 rounded transition-all">
             <IoPerson className="text-gray-700 text-xl" />

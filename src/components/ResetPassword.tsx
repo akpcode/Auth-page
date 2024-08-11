@@ -42,7 +42,7 @@ const ResetPassword: React.FC = () => {
   return (
     <>
       <Nav />
-      <div className="flex flex-col justify-center items-center h-screen bg-white">
+      <div className="flex flex-col justify-center items-center h-screen bg-gradient-to-br from-purple-700 to-black ">
         <div className="lg:w-[450px] bg-gray-100 py-20 px-10 rounded-bl-[40px] rounded-se-[40px]">
           <h2 className="text-4xl text-black-900 text-center mb-6 transition-all">Reset Password</h2>
           <form onSubmit={handleSubmit} className="w-full">
@@ -72,7 +72,7 @@ const ResetPassword: React.FC = () => {
               </div>
               {errors.confirmPassword && <p className="text-red-500 text-sm mt-2">{errors.confirmPassword}</p>}
             </div>
-            <button className="w-full bg-gray-900 text-white py-2 rounded hover:bg-purple-600">
+            <button className="animate-pulse w-full bg-gray-900 text-white py-2 rounded hover:bg-purple-600">
               <Link to="/">Submit</Link>
             </button>
           </form>
