@@ -47,11 +47,11 @@ const App: React.FC = () => {
               </li>
               <li className="mb-2 flex items-center">
                 <span className="mr-2 w-6 h-6 rounded-full bg-gray-700 text-white flex items-center justify-center">2</span>
-                Set up your workspace
+                Find your workspace
               </li>
               <li className="mb-2 flex items-center">
                 <span className="mr-2 w-6 h-6 rounded-full bg-gray-700 text-white flex items-center justify-center">3</span>
-                Set up your profile
+                Invite Your Team
               </li>
             </ol>
           </div>
@@ -87,8 +87,9 @@ const App: React.FC = () => {
               </div>
               {errors.password && <p className="text-red-500 text-sm mt-2">{errors.password}</p>}
             </div>
-            <button type="submit" className="w-full bg-purple-900 text-white py-2 rounded hover:bg-gray-600" disabled={loading}>
-              {loading ? 'Loading...' : 'Login'}
+            <button type="submit" className="w-full bg-purple-900 text-white py-2 rounded hover:bg-purple-950" disabled={loading}>
+            <Link to="/Hero"> {loading ? 'Loading...' : 'Login'}
+            </Link>
             </button>
             <div className="mt-4 text-center">
               <p>Forgot Password? <Link to="/ForgetPassword" className="text-purple-500 hover:underline">Click Here</Link></p>

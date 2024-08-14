@@ -72,7 +72,7 @@ const ResetPassword: React.FC = () => {
               </div>
               {errors.confirmPassword && <p className="text-red-500 text-sm mt-2">{errors.confirmPassword}</p>}
             </div>
-            <button className="animate-pulse w-full bg-gray-900 text-white py-2 rounded hover:bg-purple-600">
+            <button className="animate-pulse w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-950">
               <Link to="/">Submit</Link>
             </button>
           </form>

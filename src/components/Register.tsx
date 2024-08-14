@@ -87,7 +87,7 @@ function SignUp() {
           {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
         </div>
         <div >
-          <button className="w-full bg-gray-900 text-white py-2 rounded hover:bg-purple-600">
+          <button className="w-full bg-purple-900 text-white py-2 rounded hover:bg-purple-950">
           <Link to="/">Sign Up</Link> 
         </button>
                
@@ -99,7 +99,7 @@ function SignUp() {
           <button
             type="button"
             onClick={navigateToGoogle}
-            className="w-1/2 py-2 px-4 mr-2 bg-white text-black rounded-lg flex items-center justify-center hover:bg-gray-600"
+            className="w-1/2 py-2 px-4 mr-2 bg-white text-black rounded-lg flex items-center justify-center hover:bg-purple-950"
           >
             <img src={google} alt="Google" className="w-6 h-6 mr-2" />
             Google
@@ -107,7 +107,7 @@ function SignUp() {
           <button
             type="button"
             onClick={navigateToGithub}
-            className="w-1/2 py-2 px-4 mr-2 bg-white text-black rounded-lg flex items-center justify-center hover:bg-gray-600"
+            className="w-1/2 py-2 px-4 mr-2 bg-white text-black rounded-lg flex items-center justify-center hover:bg-purple-950"
           >
             <img src={github} alt="Github" className="w-6 h-6 mr-2" />
             Github

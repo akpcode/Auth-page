@@ -1,0 +1,43 @@
+/* styles.css */
+.custom-select {
+    -webkit-appearance: none; /* Remove default arrow in WebKit browsers */
+    -moz-appearance: none; /* Remove default arrow in Firefox */
+    appearance: none; /* Remove default arrow in modern browsers */
+    background-color: transparent;
+    padding-right: 1.5rem; /* To ensure enough space for custom arrow */
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .custom-select option {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Changing the arrow color */
+  .custom-select::-ms-expand {
+    display: none; /* Hide the default arrow in IE */
+  }
+  
+  /* Custom arrow - adjusting the default select element arrow */
+  .custom-select::after {
+    content: '▼'; /* Custom arrow icon */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #6b46c1; /* Purple color matching your button */
+  }
+  
+  /* Option hover */
+  .custom-select option:hover {
+    background-color: #6b46c1;
+    color: white;
+  }
+  
+  /* Option selected */
+  .custom-select:focus {
+    border-color: #6b46c1; /* Purple border when focused */
+  }
+  

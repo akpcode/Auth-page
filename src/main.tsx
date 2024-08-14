@@ -8,6 +8,7 @@ import ForgetPassword from './components/ForgetPassword';
 import Register from './components/Register';
 import OTP from './components/OTP';
 import ResetPassword from './components/ResetPassword';
+import Hero from './components/Hero';
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/ForgetPassword" element={<ForgetPassword />} />
          <Route path="/otp" element={<OTP />} />
         <Route path="/reset-password" element={<ResetPassword />} /> 
+        <Route path="/hero" element={<Hero />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
