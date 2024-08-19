@@ -64,7 +64,7 @@ const App: React.FC = () => {
                 <MdEmail className="text-gray-700 text-xl" />
                 <input
                   type="email"
-                  className="bg-transparent border-none outline-none flex-grow"
+                  className="bg-transparent border-none outline-none focus:invalid:ring-red-500"
                   placeholder="Enter Your Email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -78,7 +78,7 @@ const App: React.FC = () => {
                 <RiLockPasswordFill className="text-gray-700 text-xl" />
                 <input
                   type="password"
-                  className="bg-transparent border-none outline-none flex-grow"
+                  className="bg-transparent border-none focus:invalid:ring-red-500 outline-none flex-grow"
                   placeholder="Enter Your Password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}

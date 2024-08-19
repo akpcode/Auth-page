@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { MdEmail } from "react-icons/md";
 import { Link, useNavigate } from 'react-router-dom';
 import Nav from './Nav';
@@ -26,15 +26,27 @@ const Sidebar: React.FC = () => {
   );
 };
 
-// Verification Form Component
 const VerifyEmail: React.FC = () => {
   const [code, setCode] = useState<string[]>(['', '', '', '']);
   const [error, setError] = useState<string>('');
   const navigate = useNavigate();
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]); // Store refs to all input elements
 
   const handleChange = (index: number, value: string) => {
-    if (value.length <= 1) {
-      setCode([...code.slice(0, index), value, ...code.slice(index + 1)]);
+    if (/^\d?$/.test(value)) { // Ensure only digits are entered
+      const newCode = [...code];
+      newCode[index] = value;
+      setCode(newCode);
+
+      // Move to the next input if a digit is entered
+      if (value && index < inputRefs.current.length - 1) {
+        inputRefs.current[index + 1]?.focus();
+      }
+
+      // If input is cleared and it's not the first input, go to the previous input
+      if (!value && index > 0) {
+        inputRefs.current[index - 1]?.focus();
+      }
     }
   };
 
@@ -60,6 +72,7 @@ const VerifyEmail: React.FC = () => {
           {code.map((digit, index) => (
             <input
               key={index}
+              ref={(el) => (inputRefs.current[index] = el)} // Assign each input to a ref
               type="text"
               maxLength={1}
               value={digit}

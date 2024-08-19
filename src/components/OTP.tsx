@@ -25,7 +25,7 @@ const OTP: React.FC = () => {
         <div className="bg-gray-200 flex items-center gap-5 my-4 p-4 rounded">
           <input
             type="text"
-           className="bg-transparent border-none outline-none"
+           className="bg-transparent border-none outline-none focus:ring-2 focus:ring-purple-500"
            placeholder="Enter Otp"
             value={otp}
             onChange={(e) => setOtp(e.target.value)}
