@@ -39,8 +39,8 @@ const Nav = () => {
       {isOpen && (
         <div className="md:hidden bg-white bg-opacity-50 shadow-lg backdrop-filter backdrop-blur-md">
           <a href="#" className="block px-4 py-2 text-purple-950 hover:text-black">Search</a>
-          <a href="Community" className="text-xl text-purple-950 hover:text-black">Communities</a>
-          <a href="Workspace" className="text-xl text-purple-950 hover:text-black">Workspaces</a>
+          <Link to="/Community" className="text-xl text-purple-950 hover:text-black">Communities</Link>
+          <Link to="/Workspace" className="text-xl text-purple-950 hover:text-black">Workspaces</Link>
           <a href="#" className="block px-4 py-2 text-purple-950 hover:text-black">Ideas</a>
           <a href="#" className="block px-4 py-2 text-purple-950 hover:text-black">About Us</a>
         </div>
