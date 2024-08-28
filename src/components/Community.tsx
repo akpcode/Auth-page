@@ -5,7 +5,7 @@ const Community = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
          <div className="bg-gray-100 p-6 sm:p-10 rounded-lg w-full max-w-5xl">
-         <button className="px-4 py-1 mb-3 rounded-full hover:bg-purple-950"><a href="Hero">Back home</a></button> <span className="text-lg">&#8592;</span>
+         <button className="px-4 py-1 mb-3 rounded-full hover:bg-purple-950"><a href="Hero">Back Home</a></button> <span className="text-lg">&#8592;</span>
             <div className="flex flex-col sm:flex-row justify-between mb-4">
             <h3 className="text-3xl sm:text-4xl font-extrabold text-purple-950 mb-4 sm:mb-0">COMMUNITY</h3>
             </div>
