@@ -1,7 +1,6 @@
 import SpaceCont from "../shared/SpaceCont"
 
-
-const Community = () => {
+const Community: React.FC = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
          <div className="bg-gray-100 p-6 sm:p-10 rounded-lg w-full max-w-5xl">
