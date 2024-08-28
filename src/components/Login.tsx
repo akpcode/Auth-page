@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { MdEmail } from "react-icons/md";
+import { MdEmail, MdShop2 } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 
 const App: React.FC = () => {
@@ -34,12 +34,21 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-700 to-black p-10 flex items-center justify-center">
+    <>
+    <div className="fixed top-0 left-0 right-0 bg-white shadow-md z-20 md:bg-gray-500 pointer-events-auto">
+      <div className="md:flex items-center justify-between bg-white opacity-05 py-4 md:px-10 px-7">
+        <div className="font-bold text-3xl cursor-pointer flex items-center font-[Poppins] text-purple-950">
+          <span className="text-3xl mr-1 pt-2"><MdShop2 /></span> 
+          <Link to="/">Sanya's Space</Link>
+        </div>
+        </div>
+        </div>
+       <div className="min-h-screen bg-gradient-to-br from-purple-700 to-black p-10 flex items-center justify-center">
       <div className="max-w-4xl w-full mx-auto bg-gray-800 rounded-lg shadow-md overflow-hidden flex">
         <div className="hidden md:block w-1/2 bg-gradient-to-br from-purple-700 to-black p-10">
           <div className="flex flex-col justify-center h-full text-center">
             <h2 className="text-white text-3xl font-bold mb-4">Get Started with Us</h2>
-            <p className="text-gray-300 mb-6">Complete these easy steps to register your account.</p>
+            <p className="text-gray-300 mb-6">Complete these easy steps to start enjoying our services.</p>
             <ol className="text-left text-white">
               <li className="mb-2 flex items-center">
                 <span className="mr-2 w-6 h-6 rounded-full bg-white text-black flex items-center justify-center">1</span>
@@ -47,11 +56,11 @@ const App: React.FC = () => {
               </li>
               <li className="mb-2 flex items-center">
                 <span className="mr-2 w-6 h-6 rounded-full bg-gray-700 text-white flex items-center justify-center">2</span>
-                Find your workspace
+                Find your prefer workspace
               </li>
               <li className="mb-2 flex items-center">
                 <span className="mr-2 w-6 h-6 rounded-full bg-gray-700 text-white flex items-center justify-center">3</span>
-                Invite Your Team
+                Start Enjoying 
               </li>
             </ol>
           </div>
@@ -103,6 +112,8 @@ const App: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
+   
   );
 };
 

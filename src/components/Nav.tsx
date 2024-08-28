@@ -28,9 +28,9 @@ const Nav = () => {
         {/* Links for larger screens */}
         <div className="hidden md:flex space-x-8">
           <a href="#" className="text-xl text-purple-950 hover:text-black">Search</a>
-          <a href="#" className="text-xl text-purple-950 hover:text-black">Communities</a>
-          <a href="#" className="text-xl text-purple-950 hover:text-black">Workspaces</a>
-          <a href="#" className="text-xl text-purple-950 hover:text-black">Ideas</a>
+          <a href="/community" className="text-xl text-purple-950 hover:text-black">Communities</a>
+          <a href="/workspace" className="text-xl text-purple-950 hover:text-black">Workspaces</a>
+         <Link to="/#" className="text-xl text-purple-950 hover:text-black">Ideas</Link>
           <a href="#" className="text-xl text-purple-950 hover:text-black">About Us</a>
         </div>
       </div>
