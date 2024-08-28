@@ -24,8 +24,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
          <Route path="/otp" element={<OTP />} />
         <Route path="/reset-password" element={<ResetPassword />} /> 
         <Route path="/hero" element={<Hero />} />
+        <Route path='/communities' element={<Community />} />
         <Route path="/workspace" element={<Workspace />} />
-        <Route path='/communities' element={<Community/>} />
+       
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
