@@ -27,22 +27,23 @@ const Nav = () => {
 
         {/* Links for larger screens */}
         <div className="hidden md:flex space-x-8">
-          <a href="#" className="text-xl text-purple-950 hover:text-black">Search</a>
-          <a href="Community" className="text-xl text-purple-950 hover:text-black">Communities</a>
-          <a href="Workspace" className="text-xl text-purple-950 hover:text-black">Workspaces</a>
-          <a href="#" className="text-xl text-purple-950 hover:text-black">Ideas</a>
-          <Link to="/dog" className="text-xl text-purple-950 hover:text-black">About Us</Link>
+        <Link to="/Search" className="text-xl text-purple-950 hover:text-black">Search</Link>
+          <Link to="/Community" className="text-xl text-purple-950 hover:text-black">Communities</Link>
+          <Link to="/Workspace" className="text-xl text-purple-950 hover:text-black">Workspaces</Link>
+          <Link to="/Ideas" className="text-xl text-purple-950 hover:text-black">Ideas</Link>
+          <Link to="/About Us" className="text-xl text-purple-950 hover:text-black">About Us</Link>
         </div>
       </div>
 
       {/* Dropdown Menu for small screens */}
       {isOpen && (
         <div className="md:hidden bg-white bg-opacity-50 shadow-lg backdrop-filter backdrop-blur-md">
-          <a href="#" className="block px-4 py-2 text-purple-950 hover:text-black">Search</a>
+         <Link to="/Search" className="text-xl text-purple-950 hover:text-black">Search</Link>
           <Link to="/Community" className="text-xl text-purple-950 hover:text-black">Communities</Link>
           <Link to="/Workspace" className="text-xl text-purple-950 hover:text-black">Workspaces</Link>
-          <a href="#" className="block px-4 py-2 text-purple-950 hover:text-black">Ideas</a>
-          <a href="#" className="block px-4 py-2 text-purple-950 hover:text-black">About Us</a>
+          <Link to="/Ideas" className="text-xl text-purple-950 hover:text-black">Ideas</Link>
+          <Link to="/About Us" className="text-xl text-purple-950 hover:text-black">About Us</Link>
+
         </div>
       )}
     </div>
