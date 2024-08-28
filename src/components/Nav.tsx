@@ -28,10 +28,10 @@ const Nav = () => {
         {/* Links for larger screens */}
         <div className="hidden md:flex space-x-8">
           <a href="#" className="text-xl text-purple-950 hover:text-black">Search</a>
-          <Link to="/community" className="text-xl text-purple-950 hover:text-black">Communities</Link>
-          <a href="/workspace" className="text-xl text-purple-950 hover:text-black">Workspaces</a>
-         <Link to="/#" className="text-xl text-purple-950 hover:text-black">Ideas</Link>
-          <a href="#" className="text-xl text-purple-950 hover:text-black">About Us</a>
+          <a href="Community" className="text-xl text-purple-950 hover:text-black">Communities</a>
+          <a href="Workspace" className="text-xl text-purple-950 hover:text-black">Workspaces</a>
+          <a href="#" className="text-xl text-purple-950 hover:text-black">Ideas</a>
+          <Link to="/dog" className="text-xl text-purple-950 hover:text-black">About Us</Link>
         </div>
       </div>
 
