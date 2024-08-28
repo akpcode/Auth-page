@@ -25,7 +25,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <Route path="/reset-password" element={<ResetPassword />} /> 
         <Route path="/hero" element={<Hero />} />
         <Route path="/workspace" element={<Workspace />} />
-        <Route path='/community' element={<Community/>} />
+        <Route path='/communities' element={<Community/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
