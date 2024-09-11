@@ -1,8 +1,13 @@
 import SpaceCont from "../shared/SpaceCont";
+import Nav from "./Nav";
 
 const Workspace = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+    <>
+    <div>
+      <Nav />
+    </div>
+     <div className="flex items-center justify-center min-h-screen bg-gray-100 px-4">
          <div className="bg-gray-100 p-6 sm:p-10 rounded-lg w-full max-w-5xl">
             <button className="px-4 py-1 mb-3 rounded-full hover:bg-purple-950"><a href="Hero">Back home</a></button> <span className="text-lg">&#8592;</span>
             <div className="flex flex-col sm:flex-row justify-between mb-4">
@@ -36,8 +41,8 @@ const Workspace = () => {
       </div>
      
     </div>
-   
-  )
-}
+</>
+ );
+};
 
-export default Workspace
+export default Workspace;
